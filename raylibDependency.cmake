@@ -14,19 +14,22 @@ ExternalProject_Add(
 
 add_dependencies(mygame raylib)
 
-find_library(RAYLIB_LIBRARY_FILE
+
+find_library(
+    RAYLIB_LIBRARY_FILE
+
     NAMES raylib
     PATHS ${EXTERNAL_INSTALL_LOCATION}/lib/
 )
 
 target_include_directories(
         mygame
-        PUBLIC ${EXTERNAL_INSTALL_LOCATION}/include/
+        INTERFACE ${EXTERNAL_INSTALL_LOCATION}/include/
 )
 
 
 target_link_libraries(
         mygame
-        PUBLIC glfw
-        PUBLIC ${RAYLIB_LIBRARY_FILE}
+        INTERFACE glfw
+        INTERFACE ${RAYLIB_LIBRARY_FILE}
 )
