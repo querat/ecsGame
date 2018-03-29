@@ -2,7 +2,7 @@
 // Created by pasta on 26/03/18.
 //
 
-#include <PositionComponent.h>
+#include <component/PositionComponent.h>
 #include "RenderSystem.h"
 #include "../Utils.h"
 

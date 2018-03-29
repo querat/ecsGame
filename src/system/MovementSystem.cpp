@@ -3,9 +3,9 @@
 //
 
 #include <entt/entt.hpp>
-#include <VelocityComponent.h>
+#include <component/VelocityComponent.h>
 #include "MovementSystem.h"
-#include "PositionComponent.h"
+#include "component/PositionComponent.h"
 
 bool MovementSystem::init() {
     return true;

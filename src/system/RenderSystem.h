@@ -8,7 +8,7 @@
 
 #include <SFML/Graphics/RenderWindow.hpp>
 #include "entt/entt.hpp"
-#include "../SpriteComponent.h"
+#include "component/SpriteComponent.h"
 #include "../Display.h"
 
 class RenderSystem {

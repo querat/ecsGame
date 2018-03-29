@@ -15,7 +15,7 @@ set(MY_EXE_SOURCES
         src/Engine.cpp
         src/Engine.h
 
-        src/Core.cpp src/Core.h src/Timer.cpp src/Timer.h src/Display.cpp src/Display.h src/Utils.h src/SpriteComponent.h src/system/MovementSystem.cpp src/system/MovementSystem.h src/system/RenderSystem.cpp src/system/RenderSystem.h src/PositionComponent.h src/VelocityComponent.h)
+        src/Core.cpp src/Core.h src/Timer.cpp src/Timer.h src/Display.cpp src/Display.h src/Utils.h src/component/SpriteComponent.h src/system/MovementSystem.cpp src/system/MovementSystem.h src/system/RenderSystem.cpp src/system/RenderSystem.h src/component/PositionComponent.h src/component/VelocityComponent.h)
 add_executable(${MY_EXE_NAME} ${MY_EXE_SOURCES})
 
 # Build raylib before my project

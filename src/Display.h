@@ -9,7 +9,7 @@
 #include <SFML/Window.hpp>
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <deque>
-#include "SpriteComponent.h"
+#include "component/SpriteComponent.h"
 
 class Display {
 private:

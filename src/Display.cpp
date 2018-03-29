@@ -5,7 +5,7 @@
 #include <entt/entt.hpp>
 #include "Display.h"
 #include "Utils.h"
-#include "SpriteComponent.h"
+#include "component/SpriteComponent.h"
 
 Display::~Display(){
     delete mWindow;

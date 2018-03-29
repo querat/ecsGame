@@ -6,9 +6,9 @@
 #include "Core.h"
 #include "Utils.h"
 #include "entt/entt.hpp"
-#include "SpriteComponent.h"
-#include "PositionComponent.h"
-#include "VelocityComponent.h"
+#include "component/SpriteComponent.h"
+#include "component/PositionComponent.h"
+#include "component/VelocityComponent.h"
 
 Core::~Core() {
     mDisplay.close();
@@ -38,7 +38,6 @@ void Core::close() {
 void Core::update() {
 
     mMovementSystem.update(mRegistry);
-    mRenderSystem.update(mRegistry);
 }
 
 bool Core::render() {
@@ -51,7 +50,7 @@ int Core::mainLoop() {
         return EXIT_FAILURE;
     }
 
-    sf::Event evt;
+    sf::Event evt{};
 
     // TODO fix your timestep
     while (not mStopping){
