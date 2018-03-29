@@ -1,11 +1,18 @@
 # Clone and build raylib
+
+# entt ECS engine
 ExternalProject_Add(
-        raylib
-        GIT_REPOSITORY https://github.com/raysan5/raylib
-        CMAKE_ARGS -DCMAKE_INSTALL_PREFIX=${EXTERNAL_INSTALL_LOCATION}
+        entt
+        GIT_REPOSITORY https://github.com/skypjack/entt     # Clone this repository
+        INSTALL_COMMAND ""                                  # Header-only library -> don't build it
+        PREFIX  "${CMAKE_BINARY_DIR}/entt"                  # Define the install path
+)
 
-        -DBUILD_EXAMPLES=OFF    # compile error if i build -
-        -DBUILD_GAMES=OFF       # - either of those
-
-        -DSTATIC=ON             # I want a .a static library
+# SFML https://github.com/SFML/SFML/archive/2.4.2.zip
+ExternalProject_Add(
+        sfml
+        URL https://github.com/SFML/SFML/archive/2.4.2.zip
+        PREFIX "${CMAKE_BINARY_DIR}/sfml"
+        CMAKE_ARGS
+            -DCMAKE_INSTALL_PREFIX=${EXTERNAL_INSTALL_LOCATION}
 )
