@@ -2,8 +2,10 @@
 // Created by pasta on 16/03/18.
 //
 
+#include <entt/entt.hpp>
 #include "Display.h"
 #include "Utils.h"
+#include "SpriteComponent.h"
 
 Display::~Display(){
     delete mWindow;
@@ -52,7 +54,6 @@ bool Display::clear(){
 
 void Display::render() {
     mWindow->clear();
-
 
     // TODO render RenderAble entities
     // TODO GUI overlay

@@ -12,7 +12,7 @@ public:
     ~MovementSystem() = default;
 
     bool init();
-    bool update();
+    bool update(entt::DefaultRegistry &registry);
 };
 
 

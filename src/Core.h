@@ -16,7 +16,7 @@ class Core {
 private:
     bool                    mStopping = false;
     Display                 mDisplay;
-    entt::DefaultRegistry   mEntityRegistry;
+    entt::DefaultRegistry   mRegistry;
 
     MovementSystem          mMovementSystem = MovementSystem();
     RenderSystem            mRenderSystem   = RenderSystem(mDisplay);
@@ -31,6 +31,7 @@ public:
     int mainLoop();
 
 
+    bool render();
 };
 
 

@@ -2,6 +2,7 @@
 // Created by pasta on 26/03/18.
 //
 
+#include <PositionComponent.h>
 #include "RenderSystem.h"
 #include "../Utils.h"
 
@@ -17,16 +18,23 @@ bool RenderSystem::init() {
 bool RenderSystem::update(entt::DefaultRegistry &registry) {
 
     sf::RenderWindow * renderWindow = mDisplay.getRenderWindow();
-
-    if (renderWindow == nullptr){
-        LOG("Can't render: nullptr RenderWindow")
+    if (renderWindow == nullptr) {
+        LOG("called Core::render with no display !")
         return false;
     }
 
-    registry.view<SpriteComponent>().each(
-        [renderWindow](auto const &, SpriteComponent const &spriteComponent){
-            renderWindow->draw(spriteComponent.sprite);
-    });
+    renderWindow->clear();
+    for (auto entity : registry.view<SpriteComponent, PositionComponent>()){
+        auto & spriteComponent   = registry.get<SpriteComponent>(entity);
+        auto & positionComponent = registry.get<PositionComponent>(entity);
+
+        spriteComponent.sprite.setPosition(
+            static_cast<float>(positionComponent.x)
+          , static_cast<float>(positionComponent.y)
+        );
+        renderWindow->draw(spriteComponent.sprite);
+    }
+    renderWindow->display();
 
     return true;
 }

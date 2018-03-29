@@ -7,6 +7,8 @@
 #include "Utils.h"
 #include "entt/entt.hpp"
 #include "SpriteComponent.h"
+#include "PositionComponent.h"
+#include "VelocityComponent.h"
 
 Core::~Core() {
     mDisplay.close();
@@ -16,11 +18,15 @@ void Core::init() {
     mMovementSystem.init();
     mRenderSystem.init();
 
-    auto entity = mEntityRegistry.create(SpriteComponent{});
+    auto entity = mRegistry.create(
+        SpriteComponent{}
+        , PositionComponent{100, 200}
+        , VelocityComponent{2, 2}
+    );
     auto img = new sf::Texture();
     img->loadFromFile("../res/heart.png");
 
-    mEntityRegistry.get<SpriteComponent>(entity).sprite.setTexture(*img);
+    mRegistry.get<SpriteComponent>(entity).sprite.setTexture(*img);
 
 }
 
@@ -31,8 +37,12 @@ void Core::close() {
 
 void Core::update() {
 
-    mMovementSystem.update();
-    mRenderSystem.update(mEntityRegistry);
+    mMovementSystem.update(mRegistry);
+    mRenderSystem.update(mRegistry);
+}
+
+bool Core::render() {
+    return mRenderSystem.update(mRegistry);
 }
 
 int Core::mainLoop() {
@@ -46,7 +56,7 @@ int Core::mainLoop() {
     // TODO fix your timestep
     while (not mStopping){
         update();
-        mDisplay.render();
+        render();
 
         while (mDisplay.getRenderWindow()->pollEvent(evt)){
             if (evt.type == sf::Event::Closed) {
@@ -58,5 +68,6 @@ int Core::mainLoop() {
     }
     return EXIT_SUCCESS;
 }
+
 
 
