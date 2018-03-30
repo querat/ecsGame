@@ -10,8 +10,6 @@
 
 struct SpriteComponent {
     sf::Sprite  sprite;
-    int         xPos;
-    int         yPos;
 };
 
 
