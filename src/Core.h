@@ -27,7 +27,7 @@ public:
 
     void init();
     void close();
-    void update();
+    void update(float deltaTimeSeconds);
     int mainLoop();
 
 

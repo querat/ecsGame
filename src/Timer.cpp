@@ -20,6 +20,10 @@ float Timer::calcDeltaTimeInMs() {
     return delta;
 }
 
+float Timer::calcDeltaTimeInSeconds() {
+    return calcDeltaTimeInMs() / 1000.f;
+}
+
 void Timer::reset() {
     mLastTimeSample = tClock::now();
 }

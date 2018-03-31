@@ -11,7 +11,7 @@ bool MovementSystem::init() {
     return true;
 }
 
-bool MovementSystem::update(entt::DefaultRegistry &registry) {
+bool MovementSystem::update(entt::DefaultRegistry &registry, float const deltaTimeSeconds) {
 
     // filter entities containing the needed components
     for (auto entity : registry.view<PositionComponent, VelocityComponent>()) {
@@ -21,8 +21,8 @@ bool MovementSystem::update(entt::DefaultRegistry &registry) {
         auto const  & velocityComponent = registry.get<VelocityComponent>(entity);
 
         // Apply movement
-        positionComponent.x += velocityComponent.x;
-        positionComponent.y += velocityComponent.y;
+        positionComponent.x += (velocityComponent.x * deltaTimeSeconds);
+        positionComponent.y += (velocityComponent.y * deltaTimeSeconds);
     }
 
     return true;

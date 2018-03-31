@@ -6,8 +6,8 @@
 #define GAME_POSITIONCOMPONENT_H
 
 struct PositionComponent {
-    int x;
-    int y;
+    float x;
+    float y;
 };
 
 #endif //GAME_POSITIONCOMPONENT_H

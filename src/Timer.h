@@ -22,14 +22,15 @@ class Timer {
     using tTimePoint    = std::chrono::time_point<tClock>;
 
 private:
-
     tTimePoint mLastTimeSample;
 
 public:
     Timer();
     ~Timer() = default;
-    float calcDeltaTimeInMs();
-    void reset();
+
+    float   calcDeltaTimeInMs();
+    float   calcDeltaTimeInSeconds();
+    void    reset();
 };
 
 

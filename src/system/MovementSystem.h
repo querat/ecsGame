@@ -12,7 +12,7 @@ public:
     ~MovementSystem() = default;
 
     bool init();
-    bool update(entt::DefaultRegistry &registry);
+    bool update(entt::DefaultRegistry &registry, float const deltaTimeSeconds);
 };
 
 

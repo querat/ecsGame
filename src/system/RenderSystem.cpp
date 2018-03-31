@@ -29,8 +29,8 @@ bool RenderSystem::update(entt::DefaultRegistry &registry) {
         auto & positionComponent = registry.get<PositionComponent>(entity);
 
         spriteComponent.sprite.setPosition(
-            static_cast<float>(positionComponent.x)
-          , static_cast<float>(positionComponent.y)
+            positionComponent.x
+          , positionComponent.y
         );
         renderWindow->draw(spriteComponent.sprite);
     }
