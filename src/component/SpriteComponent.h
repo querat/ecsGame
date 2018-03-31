@@ -2,8 +2,8 @@
 // Created by pasta on 21/03/18.
 //
 
-#ifndef RAY_SPRITECOMPONENT_H
-#define RAY_SPRITECOMPONENT_H
+#ifndef GAME_SPRITECOMPONENT_H
+#define GAME_SPRITECOMPONENT_H
 
 #include <SFML/Graphics/Texture.hpp>
 #include <SFML/Graphics/Sprite.hpp>
@@ -13,4 +13,4 @@ struct SpriteComponent {
 };
 
 
-#endif // RAY_SPRITECOMPONENT_H
+#endif // GAME_SPRITECOMPONENT_H

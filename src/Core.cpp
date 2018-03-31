@@ -27,7 +27,6 @@ void Core::init() {
     img->loadFromFile("../res/heart.png");
 
     mRegistry.get<SpriteComponent>(entity).sprite.setTexture(*img);
-
 }
 
 void Core::close() {

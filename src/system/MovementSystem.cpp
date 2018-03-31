@@ -16,7 +16,7 @@ bool MovementSystem::update(entt::DefaultRegistry &registry) {
     // filter entities containing the needed components
     for (auto entity : registry.view<PositionComponent, VelocityComponent>()) {
 
-        // Get the components owned b   y the entity
+        // Get the components owned by the entity
         auto        & positionComponent = registry.get<PositionComponent>(entity);
         auto const  & velocityComponent = registry.get<VelocityComponent>(entity);
 

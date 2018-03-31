@@ -2,8 +2,8 @@
 // Created by pasta on 26/03/18.
 //
 
-#ifndef RAY_RENDERSYSTEM_H
-#define RAY_RENDERSYSTEM_H
+#ifndef GAME_RENDERSYSTEM_H
+#define GAME_RENDERSYSTEM_H
 
 
 #include <SFML/Graphics/RenderWindow.hpp>
@@ -22,10 +22,7 @@ public:
 
     bool        init();
     bool        update(entt::DefaultRegistry &registry);
-
-
-
 };
 
 
-#endif //RAY_RENDERSYSTEM_H
+#endif //GAME_RENDERSYSTEM_H

@@ -2,8 +2,8 @@
 // Created by pasta on 14/03/18.
 //
 
-#ifndef RAY_ENGINE_H
-#define RAY_ENGINE_H
+#ifndef GAME_ENGINE_H
+#define GAME_ENGINE_H
 
 
 class Engine {
@@ -17,4 +17,4 @@ public:
 };
 
 
-#endif //RAY_ENGINE_H
+#endif //GAME_ENGINE_H

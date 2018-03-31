@@ -2,8 +2,8 @@
 // Created by pasta on 16/03/18.
 //
 
-#ifndef RAY_CORE_H
-#define RAY_CORE_H
+#ifndef GAME_CORE_H
+#define GAME_CORE_H
 
 #include <deque>
 #include "entt/entt.hpp"
@@ -35,4 +35,4 @@ public:
 };
 
 
-#endif //RAY_CORE_H
+#endif //GAME_CORE_H

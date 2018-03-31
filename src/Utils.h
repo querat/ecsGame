@@ -2,8 +2,8 @@
 // Created by pasta on 16/03/18.
 //
 
-#ifndef RAY_UTILS_H_H
-# define RAY_UTILS_H_H
+#ifndef GAME_UTILS_H_H
+# define GAME_UTILS_H_H
 
 #include <iostream>
 
@@ -17,4 +17,4 @@
 #  define TRACE(...){}
 # endif
 
-# endif // !RAY_UTILS_H_H
+# endif // !GAME_UTILS_H_H

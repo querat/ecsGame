@@ -2,8 +2,8 @@
 // Created by pasta on 26/03/18.
 //
 
-#ifndef RAY_MOVEMENTSYSTEM_H
-#define RAY_MOVEMENTSYSTEM_H
+#ifndef GAME_MOVEMENTSYSTEM_H
+#define GAME_MOVEMENTSYSTEM_H
 
 class MovementSystem {
 
@@ -16,4 +16,4 @@ public:
 };
 
 
-#endif //RAY_MOVEMENTSYSTEM_H
+#endif //GAME_MOVEMENTSYSTEM_H

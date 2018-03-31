@@ -2,8 +2,8 @@
 // Created by pasta on 16/03/18.
 //
 
-#ifndef RAY_DISPLAY_H
-#define RAY_DISPLAY_H
+#ifndef GAME_DISPLAY_H
+#define GAME_DISPLAY_H
 
 #include <string>
 #include <SFML/Window.hpp>
@@ -33,4 +33,4 @@ public:
 };
 
 
-#endif //RAY_DISPLAY_H
+#endif //GAME_DISPLAY_H
