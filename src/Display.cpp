@@ -65,3 +65,9 @@ sf::RenderWindow * Display::getRenderWindow() {
     return mWindow;
 }
 
+bool Display::pollEvent(sf::Event & event) {
+    if (not isReady())
+        return false;
+    return mWindow->pollEvent(event);
+}
+

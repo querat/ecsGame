@@ -26,10 +26,10 @@ public:
     ~Core();
 
     void init();
+    void destroy();
     void close();
     void update(float deltaTimeSeconds);
     int mainLoop();
-
 
     bool render();
 };

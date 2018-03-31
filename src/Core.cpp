@@ -12,6 +12,10 @@
 #include "utility/Timer.h"
 
 Core::~Core() {
+    destroy();
+}
+
+void Core::destroy() {
     mDisplay.close();
 }
 
@@ -45,21 +49,20 @@ bool Core::render() {
 }
 
 int Core::mainLoop() {
-    Timer timer;
+    Timer       timer;
+    sf::Event   evt{};
 
     if (not mDisplay.init(1368, 768, "Game")){
         CERR("Could not create display");
         return EXIT_FAILURE;
     }
 
-    sf::Event evt{};
-
     // TODO fix your timestep
     while (not mStopping){
         update(timer.calcDeltaTimeInSeconds());
         render();
 
-        while (mDisplay.getRenderWindow()->pollEvent(evt)){
+        while (mDisplay.pollEvent(evt)){
             if (evt.type == sf::Event::Closed) {
                 mDisplay.close();
                 mStopping = true;
@@ -69,6 +72,7 @@ int Core::mainLoop() {
     }
     return EXIT_SUCCESS;
 }
+
 
 
 

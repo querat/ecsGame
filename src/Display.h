@@ -28,6 +28,7 @@ public:
     bool                close();
     bool                isReady() const;
     void                render();
+    bool                pollEvent(sf::Event &event);
     sf::RenderWindow *  getRenderWindow();
     bool                clear();
 };

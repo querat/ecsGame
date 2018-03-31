@@ -9,7 +9,7 @@ int main()
 
     core.init();
     core.mainLoop();
-
+    core.destroy();
 
     return EXIT_SUCCESS;
 }
