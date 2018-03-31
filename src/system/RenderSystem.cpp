@@ -4,7 +4,7 @@
 
 #include <component/PositionComponent.h>
 #include "RenderSystem.h"
-#include "../Utils.h"
+#include "utility/Utils.h"
 
 RenderSystem::RenderSystem(Display & display)
     : mDisplay(display) {

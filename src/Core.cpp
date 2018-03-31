@@ -4,12 +4,12 @@
 
 #include <iostream>
 #include "Core.h"
-#include "Utils.h"
+#include "utility/Utils.h"
 #include "entt/entt.hpp"
 #include "component/SpriteComponent.h"
 #include "component/PositionComponent.h"
 #include "component/VelocityComponent.h"
-#include "Timer.h"
+#include "utility/Timer.h"
 
 Core::~Core() {
     mDisplay.close();

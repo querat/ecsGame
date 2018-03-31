@@ -9,13 +9,27 @@ include(Dependencies.cmake)
 
 #set(CMAKE_CXX_COMPILER clang++)
 set(MY_EXE_NAME mygame)
-set(MY_EXE_SOURCES
+set(
+        MY_EXE_SOURCES
+
         src/main.cpp
 
-        src/Engine.cpp
-        src/Engine.h
-
-        src/Core.cpp src/Core.h src/Timer.cpp src/Timer.h src/Display.cpp src/Display.h src/Utils.h src/component/SpriteComponent.h src/system/MovementSystem.cpp src/system/MovementSystem.h src/system/RenderSystem.cpp src/system/RenderSystem.h src/component/PositionComponent.h src/component/VelocityComponent.h src/component/EventComponent.h)
+        src/Core.h
+        src/Core.cpp
+        src/Display.h
+        src/Display.cpp
+        src/system/MovementSystem.h
+        src/system/MovementSystem.cpp
+        src/system/RenderSystem.h
+        src/system/RenderSystem.cpp
+        src/component/SpriteComponent.h
+        src/component/PositionComponent.h
+        src/component/VelocityComponent.h
+        src/component/EventComponent.h
+        src/utility/Utils.h
+        src/utility/Timer.h
+        src/utility/Timer.cpp
+)
 add_executable(${MY_EXE_NAME} ${MY_EXE_SOURCES})
 
 # Build raylib before my project

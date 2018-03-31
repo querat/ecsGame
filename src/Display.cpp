@@ -4,7 +4,7 @@
 
 #include <entt/entt.hpp>
 #include "Display.h"
-#include "Utils.h"
+#include "utility/Utils.h"
 #include "component/SpriteComponent.h"
 
 Display::~Display(){
