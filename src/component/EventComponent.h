@@ -7,12 +7,23 @@
 
 #include <SFML/Window/Keyboard.hpp>
 #include <SFML/Window/Event.hpp>
+#include <entt/entt.hpp>
+
+struct CollisionEvent {
+
+};
 
 struct EventComponent {
 
-    sf::Event::EventType eventType;
+    typedef enum Type_e {
+        COLLISION
+        , KEY_PRESSED
+    } Type;
+
+    Type type;
 
     union {
+        CollisionEvent      collisionEvent;
         sf::Event::KeyEvent keyEvent;
     };
 

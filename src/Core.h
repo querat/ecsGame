@@ -6,6 +6,7 @@
 #define GAME_CORE_H
 
 #include <deque>
+#include <system/InputSystem.h>
 #include "entt/entt.hpp"
 #include "Display.h"
 #include "system/MovementSystem.h"
@@ -19,6 +20,7 @@ private:
     entt::DefaultRegistry   mRegistry;
 
     MovementSystem          mMovementSystem = MovementSystem();
+    InputSystem             mInputSystem    = InputSystem(mDisplay);
     RenderSystem            mRenderSystem   = RenderSystem(mDisplay);
 
 public:

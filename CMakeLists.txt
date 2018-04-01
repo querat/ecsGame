@@ -18,18 +18,25 @@ set(
         src/Core.cpp
         src/Display.h
         src/Display.cpp
-        src/system/MovementSystem.h
-        src/system/MovementSystem.cpp
-        src/system/RenderSystem.h
-        src/system/RenderSystem.cpp
+
+        src/utility/Utils.h
+        src/utility/Timer.h
+        src/utility/Timer.cpp
+
         src/component/SpriteComponent.h
         src/component/PositionComponent.h
         src/component/VelocityComponent.h
         src/component/EventComponent.h
-        src/utility/Utils.h
-        src/utility/Timer.h
-        src/utility/Timer.cpp
+        src/component/InputComponent.h
+
+        src/system/MovementSystem.h
+        src/system/MovementSystem.cpp
+        src/system/RenderSystem.h
+        src/system/RenderSystem.cpp
+        src/system/InputSystem.cpp
+        src/system/InputSystem.h
 )
+
 add_executable(${MY_EXE_NAME} ${MY_EXE_SOURCES})
 
 # Build raylib before my project
